@@ -11,6 +11,7 @@ import java.util.Collection;
 import java.util.List;
 import java.util.Optional;
 import java.util.function.Consumer;
+import java.util.function.Predicate;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import java.util.stream.Stream;
@@ -28,7 +29,7 @@ public class FileParser {
   public List<StackTrace> parse() {
     List<StackTrace> stackTraces = new ArrayList<>();
     try (Stream<String> lines = Files.lines(fileToParse, StandardCharsets.ISO_8859_1)){
-      lines.forEach(applyFilters().andThen(parseLine(stackTraces)));
+      lines.filter(applyFilters()).forEach(parseLine(stackTraces));
       addCurrentIfUnique(stackTraces);
     } catch (Exception e) {
       System.out.println("FAILED TO PARSE: " + fileToParse);
@@ -37,7 +38,7 @@ public class FileParser {
     return stackTraces;
   }
 
-  private FilteredConsumer<String> applyFilters() {
+  private Predicate<String> applyFilters() {
     final LineHistory lineHistory = new LineHistory();
     return line -> {
       if (lineHistory.getLast().contains("Caused by:") && STACK_FRAME_IDENTIFIER.matcher(line).matches()) {
