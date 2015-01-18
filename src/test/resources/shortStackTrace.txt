@@ -1,0 +1,12 @@
+2015-01-16 00:34:13 JRebel-Spring: Adding bean 'beanAdded'
+411:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1295) ~[catalina.jar:8.0.15]
+412:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1147) ~[catalina.jar:8.0.15]:1
+... 39 common frames omitted
+2015-01-16 00:34:13 JRebel-Spring: Adding bean 'beanAdded'
+411:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1295) ~[catalina.jar:8.0.15]
+412:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1147) ~[catalina.jar:8.0.15]:1
+... 39 common frames omitted
+2015-01-16 00:34:13 JRebel-Spring: Adding bean 'beanAdded'
+411:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1295) ~[catalina.jar:8.0.15]
+412:	at org.apache.catalina.loader.WebappClassLoaderBase.loadClass(WebappClassLoaderBase.java:1147) ~[catalina.jar:8.0.15]:1
+... 39 common frames omitted

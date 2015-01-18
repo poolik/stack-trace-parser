@@ -1,0 +1,60 @@
+2015-01-16 00:34:07 JRebel-Spring: Adding bean 'beanAdded'
+2015-01-16 00:34:07 JRebel: ERROR An error occured in a request listener while handling before request event: java.lang.RuntimeException: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [springapp.bean.TestBean] for bean with name 'beanAdded' defined in file [/home/ubuntu/jr-servlettest8/work/tests/springBean32Tests/testXmlBeanClassNameFromPlaceholderProperty/main/WEB-INF/classes/beans.xml]; nested exception is java.lang.ClassNotFoundException: springapp.bean.TestBean
+	at org.springframework.beans.JrBeanReloader.beforeRequest(JrBeanReloader.java:251)
+	at org.zeroturnaround.javarebel.integration.util.RequestListenerUtil$BoundRequestListener.beforeRequest(SourceFile:93)
+	at com.zeroturnaround.javarebel.akD.a(SourceFile:132)
+	at com.zeroturnaround.javarebel.akD.a(SourceFile:89)
+	at com.zeroturnaround.javarebel.akD.fireBeforeRequest(SourceFile:72)
+	at org.mortbay.jetty.handler.ContextHandler.handle(ContextHandler.java)
+	at org.mortbay.jetty.webapp.WebAppContext.handle(WebAppContext.java:417)
+	at org.mortbay.jetty.handler.ContextHandlerCollection.handle(ContextHandlerCollection.java:230)
+	at org.mortbay.jetty.handler.HandlerCollection.handle(HandlerCollection.java:114)
+	at org.mortbay.jetty.handler.HandlerWrapper.handle(HandlerWrapper.java:152)
+	at org.mortbay.jetty.Server.handle(Server.java:324)
+	at org.mortbay.jetty.HttpConnection.handleRequest(HttpConnection.java:534)
+	at org.mortbay.jetty.HttpConnection$RequestHandler.headerComplete(HttpConnection.java:864)
+	at org.mortbay.jetty.HttpParser.parseNext(HttpParser.java:533)
+	at org.mortbay.jetty.HttpParser.parseAvailable(HttpParser.java:207)
+	at org.mortbay.jetty.HttpConnection.handle(HttpConnection.java:403)
+	at org.mortbay.io.nio.SelectChannelEndPoint.run(SelectChannelEndPoint.java:409)
+	at org.mortbay.thread.QueuedThreadPool$PoolThread.run(QueuedThreadPool.java:522)
+Caused by: org.springframework.beans.factory.CannotLoadBeanClassException: Cannot find class [springapp.bean.TestBean] for bean with name 'beanAdded' defined in file [/home/ubuntu/jr-servlettest8/work/tests/springBean32Tests/testXmlBeanClassNameFromPlaceholderProperty/main/WEB-INF/classes/beans.xml]; nested exception is java.lang.ClassNotFoundException: springapp.bean.TestBean
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1278)
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.predictBeanType(AbstractAutowireCapableBeanFactory.java:575)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:1347)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.isFactoryBean(AbstractBeanFactory.java:913)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:617)
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.jrReInstantiateSingletons(DefaultListableBeanFactory.java)
+	at org.springframework.beans.JrBeanReloader.reloadBeanDefinitionsInternal(JrBeanReloader.java:722)
+	at org.springframework.beans.JrBeanReloader.reloadBeanDefinitions(JrBeanReloader.java:679)
+	at org.springframework.beans.JrBeanReloader.doCheckAndReloadBeanDefinitions(JrBeanReloader.java:646)
+	at org.springframework.beans.JrBeanReloader.beforeRequest(JrBeanReloader.java:245)
+	... 17 more
+Caused by: java.lang.ClassNotFoundException: springapp.bean.TestBean
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:202)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:247)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:379)
+	at org.mortbay.jetty.webapp.WebAppClassLoader.loadClass(WebAppClassLoader.java:341)
+	at org.springframework.util.ClassUtils.forName(ClassUtils.java:265)
+	at org.springframework.beans.factory.support.AbstractBeanDefinition.resolveBeanClass(AbstractBeanDefinition.java:419)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doResolveBeanClass(AbstractBeanFactory.java:1299)
+	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveBeanClass(AbstractBeanFactory.java:1270)
+	... 26 more
+2015-01-16 00:34:13 JRebel-Spring: Adding bean 'beanAdded'
+2015-01-16 00:07:58 JRebel-SDK-CBP: ERROR Class 'org.apache.cxf.common.util.ASMHelper' could not be processed by org.zeroturnaround.javarebel.integration.cxf.cbp.ASMHelperCBP@org.apache.geronimo.kernel.config.MultiParentClassLoader@75f53: java.lang.NoClassDefFoundError: org/zeroturnaround/javarebel/integration/cxf/ASMHelperReloader
+	at org.springframework.beans.JrBeanReloader.beforeRequest(JrBeanReloader.java:251)
+	at org.zeroturnaround.javarebel.integration.util.RequestListenerUtil$BoundRequestListener.beforeRequest(SourceFile:93)
+	at com.zeroturnaround.javarebel.akD.a(SourceFile:132)
+	at com.zeroturnaround.javarebel.akD.a(SourceFile:89)
+7492:	at com.zeroturnaround.javarebel.atb.a(SourceFile.java):1
+7493:	at com.zeroturnaround.javarebel.SDKIntegrationImpl.runBytecodeProcessors(SourceFile:30):1
+7494:	at com.zeroturnaround.javarebel.ash.transform(SourceFile:84):1
+7495:	at java.lang.ClassLoader.defineClass(ClassLoader.java):1
+7496:	at java.security.SecureClassLoader.defineClass(SecureClassLoader.java:141):1
+7497:	at java.net.URLClassLoader.defineClass(URLClassLoader.java:283):1
+7498:	at java.net.URLClassLoader.access$000(URLClassLoader.java:58):1
+7499:	at java.net.URLClassLoader$1.run(URLClassLoader.java:197):1
+2015-01-16 00:34:13 JRebel-Spring: Adding bean 'beanAdded'
